@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Maze Game</title>
+</head>
+<body>
+    <div class="board welcome">
+        <div>CLICK TO START</div>
+        <button id="easy" onclick="startGame(game),easy(game)">EASY</button>
+        <button id="medium" onclick="startGame(game),medium(game)">MEDIUM</button>
+        <button id="hard" onclick="startGame(game),hard(game)">HARD</button>
+    </div>
+   
+
+    <div class="timer-board cached">
+        <div class="timer">00:00</div>
+        <div class="button-containers">
+            <div class="game-button" onclick="pauseGame(game,this)">🔓</div>
+            <div class="game-button" onclick="location.reload()">👼🏻</div>
+        </div>
+    </div>
+    <div class="game-board cached">
+        <div class="maze"></div>
+    </div>
+    <div class="board win-result cached">
+        <div>You win</div>
+        <div class="result-details" id="score"></div>
+        <div class="result-details" id="time"></div>
+        <button onclick="window.location.reload()">Replay</button>
+    </div>
+    <div class="board lose-result cached">
+        <div>Game over</div>
+        <button onclick="window.location.reload()"> Replay</button>
+    </div>
+</body>
+<script src="scripts/classes.js"></script>
+<script src="scripts/game.js"></script>
+<script src="scripts/drawers.js"></script>
+<script src="scripts/app.js"></script>
+</html>
